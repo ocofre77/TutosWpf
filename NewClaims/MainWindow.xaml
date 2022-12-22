@@ -1,0 +1,171 @@
+﻿<Window x:Class="NewClaims.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NewClaims"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent"
+        Title="Inicio" Height="600" Width="1000">
+    <Border CornerRadius="20" Background="Moccasin">
+        <Grid Name="Principal" Background="Transparent">
+            
+            <!-- <Grid.RowDefinitions> -->
+            <!--     <RowDefinition Height="50"></RowDefinition> -->
+            <!--     <RowDefinition Height="50" ></RowDefinition> -->
+            <!-- </Grid.RowDefinitions> -->
+            <!-- <Grid.ColumnDefinitions> -->
+            <!--     <ColumnDefinition></ColumnDefinition> -->
+            <!--     <ColumnDefinition></ColumnDefinition> -->
+            <!-- </Grid.ColumnDefinitions> -->
+            <!-- -->
+            <!-- <TextBlock Grid.Row="0" Grid.Column="1" Text="Ingrese Usuario"  ></TextBlock> -->
+            <!-- <TextBlock Grid.Row="1"  Text="Ingrese Clave"  ></TextBlock> -->
+            <!-- -->
+            <!-- #Region Header -->
+            <Grid Name="Header" Height="35" VerticalAlignment="Top" Background="Transparent">
+                <Border CornerRadius="20 20 0 0" Background="Pink"></Border>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition Width="220"></ColumnDefinition>
+                        <ColumnDefinition Width="100"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <!-- #REGION TITLE -->
+                    <TextBlock Grid.Column="0" Text="Tienda de Anita"
+                               Foreground="Black"
+                               FontSize="15"
+                               Margin="20,0,0,0"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Center"></TextBlock>
+                    <!-- #END REGION -->
+                    <!-- #REGION MI CUENTA -->
+                    <Button Grid.Column="1" 
+                            Name="BtnCuenta" 
+                            Background="Transparent"
+                            BorderBrush="Transparent"
+                            FontSize="15" Foreground="Black"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Left" 
+                            Cursor="Hand">
+                        
+                        <Grid >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="15" ></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="1" 
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"
+                                       Margin="5,0,0,0"
+                                       Text="Mi Cuenta"></TextBlock>
+                            <Image Grid.Column="0" Source="SCS/images/cog-solid.png" ></Image>
+                            
+                        </Grid>
+                    </Button>
+                    <!-- #END REGION -->
+                    <!-- #REGION MI INFO -->
+                    <Button Grid.Column="1" 
+                            Name="BtnInfo" 
+                            Background="Transparent"
+                            BorderBrush="Transparent"
+                            FontSize="15" Foreground="Black"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Right" 
+                            Cursor="Hand">
+                        
+                        <Grid >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="15" ></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="1" 
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"
+                                       Margin="5,0,0,0"
+                                       Text="Info"></TextBlock>
+                            <Image Grid.Column="0" Source="SCS/images/cog-solid.png" ></Image>
+                            
+                        </Grid>
+                    </Button>
+                    <!-- #END REGION -->
+                    
+                    <!-- #REGION MINIMIZAR -->
+                    <Button Grid.Column="2"
+                            Name="BtnMinimizar"
+                            Background="Transparent"
+                            BorderBrush="Transparent"
+                            Height="25"
+                            Width="25"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Top"
+                            Margin="0,5,5,0">
+                        <Image Source="SCS/images/cog-solid.png"
+                               Cursor="Hand"></Image>
+                    </Button>
+                    <!-- #END REGION -->
+
+                    <!-- #REGION CERRAR -->
+                    <Button Grid.Column="2"
+                            Name="BtnCerrar"
+                            Background="Transparent"
+                            BorderBrush="Transparent"
+                            Height="25"
+                            Width="25"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Top"
+                            Margin="0, 5,30,0">
+                        <Image Source="SCS/images/cog-solid.png"
+                               Cursor="Hand"></Image>
+                    </Button>
+                    <!-- #END REGION -->                    
+                </Grid>
+            </Grid>
+            <!-- #EndRegion     -->
+                <!-- #REGION SIDEBAR -->
+                <Grid Name="GridMenu"
+                      Background="Transparent"
+                      Width="200"
+                      HorizontalAlignment="Left"
+                      Margin="0,35,0,0">
+                      <Border Background="Peru"
+                              CornerRadius="0,0,0,20">
+                          <StackPanel Background="Transparent"
+                                      VerticalAlignment="Top">
+                              <!-- #REGION SHOW/HIDE -->
+                              <Grid Background="Transparent"
+                                    VerticalAlignment="Top"
+                                    HorizontalAlignment="Right"
+                                    Margin="0,10, 10, 0">
+                                    <ToggleButton 
+                                        Name="BtnShowHide"
+                                        Height="30" Width="30"
+                                        BorderBrush="Transparent">
+                                        <ToggleButton.Background >
+                                            <ImageBrush></ImageBrush>
+                                        </ToggleButton.Background>
+                                        <ToggleButton.Triggers>
+                                            <!-- #REGION HIDE -->
+                                            
+                                            <!-- #END REGION -->
+                                            
+                                            <!-- #REGION SHOW -->
+                                            
+                                            <!-- #END REGION -->
+                                        </ToggleButton.Triggers>
+                                    </ToggleButton>
+                              </Grid>
+                              <!-- #END REGION -->
+                          </StackPanel>
+                          
+                      </Border>  
+                    
+                </Grid>
+                <!-- #EndRegion     -->
+        </Grid>
+       
+    </Border>
+</Window>
